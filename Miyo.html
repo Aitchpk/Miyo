@@ -1,0 +1,2537 @@
+<html>
+
+
+    <head>
+        <title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+
+        <!--     
+ 
+        Created by: Heather Kincaid, Jan 2016           
+        Theme: Miyo | aitchpk.tumblr.com
+         __  __   ___   _   _   ____
+        |  \/  | |_ _| | |_| | / __ \
+        | |\/| |  | |   \   / | (__) | 
+        |_|  |_| |___|   |_|   \____/  
+         _____   _  _   ___   __  __   ___ 
+        |_   _| | || | | __| |  \/  | | __|
+          | |   | __ | | _|  | |\/| | | _|
+          |_|   |_||_| |___| |_|  |_| |___| 
+
+        -->
+
+        <!-- .............................................. TABLE OF CONTENTS .............................................. -->
+
+        <!--
+
+        [SECTION_0.0] DEFAULTS FOR CUSTOMIZATION OPTIONS 
+            [SECTION_0.1] IMAGES
+            [SECTION_0.2] COLOURS
+            [SECTION_0.3] SELECTS                      
+            [SECTION_0.4] OPTIONS
+            [SECTION_0.5] TEXT
+            [SECTION_0.6] FONTS    
+
+        [SECTION_1.0] CUSTOM CSS 
+            [SECTION_1.1] BODY STYLES
+            [SECTION_1.2] NAVIGATION BAR
+            [SECTION_1.3] HEADER
+            [SECTION_1.4] INTRODUCTION
+            [SECTION_1.5] SHAPE OVERLAY
+            [SECTION_1.6] TEXT COLOURS
+            [SECTION_1.7] ALL POSTS
+            [SECTION_1.8] SOCIAL BUTTONS
+            [SECTION_1.9] ANSWER POSTS
+            [SECTION_1.10] AUDTIO POSTS
+            [SECTION_1.11] CHAT POSTS
+            [SECTION_1.12] LINK POSTS
+            [SECTION_1.13] QUOTE POSTS
+            [SECTION_1.14] PHOTO POSTS
+            [SECTION_1.15] VIDEO POSTS
+            [SECTION_1.16] MEDIA QUERIES
+
+        [SECTION_2.0] JAVASCRIPT
+            [SECTION_2.1] MASONRY AND INFINITE SCROLL
+            [SECTION_2.2] FADE HEADER
+            [SECTION_2.3] MOVE LOGO
+            [SECTION_2.4] PARALAX EFFECT
+            [SECTION_2.5] MOBILE MENU
+
+        [SECTION_3.0] NAVIGATION BAR
+
+        [SECTION_4.0] HEADER
+
+        [SECTION_5.0] MAIN CONTENT
+            [SECTION_5.1] TEXT POST
+            [SECTION_5.2] PHOTO POST
+            [SECTION_5.3] PHOTOSET POST
+            [SECTION_5.4] PANORAMA POST
+            [SECTION_5.5] QUOTE POST
+            [SECTION_5.6] LINK POST
+            [SECTION_5.7] AUDIO POST
+            [SECTION_5.8] VIDEO POST
+            [SECTION_5.9] ANSWER POST
+
+        [SECTION_6.0] POST FOOTER
+            [SECTION_6.1] LIKE REBLOG AND SOCIAL MEDIA BUTTONS
+            [SECTION_6.2] NOTES
+            [SECTION_6.3] PAGE NAVIGATION
+  
+        -->
+
+
+
+
+
+        <!-- [SECTION_0.0] -->
+        <!-- ..................................... DEFAULTS FOR CUSTOMIZATION OPTIONS ..................................... -->
+
+            <!-- [SECTION_0.1] -->
+            <!-- IMAGES --> 
+                <!-- HEADER OPTIONS -->
+                    <meta name="image:Header background" content="http://static.tumblr.com/wwsspkq/TzUo2iz77/miyo_default_header.jpg"/> <!--DEFAULT HEADER -->
+                    <meta name="image:Logo image" content="http://static.tumblr.com/wwsspkq/z8fo2iym9/miyo_theme_logo.png"/><!--DEFAULT LOGO -->
+
+            <!-- [SECTION_0.2] -->
+            <!-- COLOURS -->
+                <!-- NAV OPTIONS -->           
+                    <meta name="color:Navigation background" content="#222222"/><!-- COLOUR OF THE NAVIGATION BAR -->
+                    <meta name="color:Navigation font colour" content="#FFFFFF"/><!-- COLOUR OF THE NAVIGATION LINKS -->                
+                    <meta name="color:Navigation hover font colour" content="#315f7a"/><!-- COLOUR OF THE NAVIGATION LINKS ON HOVER --> 
+                    <meta name="color:Navigation shadow colour" content="#000000"/><!-- COLOUR OF THE NAVIGATION LINKS ON HOVER -->
+                <!-- HEADER OPTIONS --> 
+                    <meta name="color:Header background colour" content="#000000"/><!-- COLOUR OF THE HEADER BACKGROUND -->
+                    <meta name="color:Header fade colour" content="#000000"/><!-- COLOUR THE HEADER FADES TO -->
+                    <meta name="color:Gradient colour 1" content="#00ff82"/><!-- GRADIENT COLOUR TOP LEFT -->
+                    <meta name="color:Gradient colour 2" content="#9e00ff"/><!-- GRADIENT COLOUR BOTTOM RIGHT -->
+                    <meta name="color:Top tagline font colour" content="#FFFFFF"/> <!-- TAGLINE FONT COLOUR --> 
+                    <meta name="color:Top tagline background colour" content="#000000"/><!-- TAGLINE BACKGROUND --> 
+                    <meta name="color:Top tagline border colour" content="#FFFFFF"/><!-- TAGLINE BORDER -->
+                    <meta name="color:Bottom tagline font colour" content="#FFFFFF"/> <!-- TAGLINE FONT COLOUR --> 
+                    <meta name="color:Bottom tagline background colour" content="#000000"/><!-- TAGLINE BACKGROUND --> 
+                    <meta name="color:Bottom tagline border colour" content="#FFFFFF"/><!-- TAGLINE BORDER -->                   
+                <!-- BODY OPTIONS --> 
+                    <meta name="color:Background colour" content="#142e3c"/><!-- COLOUR OF THE BACKGROUND --> 
+                    <meta name="color:Post background colour" content="#eeeeee"/><!-- COLOUR OF THE ENTRIES --> 
+                    <meta name="color:Post accent colour" content="#224d65"/><!-- COLOUR OF THE ENTRIES --> 
+                    <meta name="color:Title font colour" content="#eeeeee"/><!-- COLOUR OF THE TITLES -->                  
+                    <meta name="color:Sub text font colour" content="#0e1d25"/><!-- COLOUR OF THE SUB TEXT -->
+                    <meta name="color:Body font colour" content="#0e1d25"/><!-- COLOUR OF THE BODY TEXT -->                       
+                    <meta name="color:Share icons colour" content="#142e3c"/><!-- COLOUR OF THE SHAPE ICONS -->   
+
+            <!-- [SECTION_0.3] -->
+            <!-- SELECTS -->
+                <!-- NAV OPTIONS  -->
+                <!-- CONVERT CASE OPTION  -->
+                    <meta name="select:Navigtion capitalization" content="uppercase" title="Uppercase">
+                    <meta name="select:Navigtion capitalization" content="lowercase" title="Lowercase">
+                    <meta name="select:Navigtion capitalization" content="capitalize" title="Capitalize"> 
+                <!-- HEADER OPTIONS  -->
+                    <!-- HEADER BEHAVIOUR  -->
+                    <meta name="select:Header behaviour" content="cover" title="Fill screen">                   
+                    <meta name="select:Header behaviour" content="initial" title="Actual width">
+                    <!-- TOP TAGLINE BORDER -->
+                    <meta name="select:Top tagline border style" content="solid" title="Solid">
+                    <meta name="select:Top tagline border style" content="none" title="None">
+                    <meta name="select:Top tagline border style" content="dotted" title="Dotted">       
+                    <meta name="select:Top tagline border style" content="dashed" title="Dashed">
+                    <meta name="select:Top tagline border style" content="double" title="Double">
+                    <meta name="select:Top tagline border style" content="inset" title="Inset">
+                    <meta name="select:Top tagline border style" content="outset" title="Outset"> 
+                    <!-- Bottom TAGLINE BORDER -->
+                    <meta name="select:Bottom tagline border style" content="solid" title="Solid">
+                    <meta name="select:Bottom tagline border style" content="none" title="None">
+                    <meta name="select:Bottom tagline border style" content="dotted" title="Dotted">       
+                    <meta name="select:Bottom tagline border style" content="dashed" title="Dashed">
+                    <meta name="select:Bottom tagline border style" content="double" title="Double">
+                    <meta name="select:Bottom tagline border style" content="inset" title="Inset">
+                    <meta name="select:Bottom tagline border style" content="outset" title="Outset">                      
+                    <!-- SHAPE OVERLAY  -->
+                    <meta name="select:Shape overlay shape" content="792,167 0.001,167 0.001,0.002 396,167 792,0.002 " title="Pointed down large">
+                    <meta name="select:Shape overlay shape" content="792,167 0.001,167 0.001,167 396,0.002 792,167" title="Pointed up large">
+                    <meta name="select:Shape overlay shape" content="792,0 594,0 396,167 198,0 0,0 0,167 792,167" title="Pointed down small"> 
+                    <meta name="select:Shape overlay shape" content="792,167 594,167 396,0 198,167 0,167 0,167 792,167" title="Pointed up small"> 
+                    <meta name="select:Shape overlay shape" content="792,167 0,167 0,0" title="Slant right"> 
+                    <meta name="select:Shape overlay shape" content="0,167 792,167 792,0" title="Slant left">                     
+                    <meta name="select:Shape overlay shape" content="792,0 726,155 660,0 594.001,155 528.001,0 462,155 396,0 330,155 264,0 198,155 132,0 66,155 0,0 
+                    0,167 792,167" title="Zigzag 1">
+                    <meta name="select:Shape overlay shape" content="752.895,1.971 713.27,163.191 673.644,1.971 634.018,163.191 594.391,1.971 554.765,163.191 
+                    515.14,1.971 475.513,163.191 435.887,1.971 396.261,163.191 356.635,1.971 317.009,163.191 277.382,1.971 237.756,163.191 
+                    198.13,1.971 158.504,163.191 118.878,1.971 79.252,163.191 39.626,1.971 0,163.191 0,167 792.521,167 792.521,163.191 " title="Zigzag 2">
+                    <meta name="select:Shape overlay shape" content="719.659,0 719.659,83.257 647.709,83.257 647.709,0 575.368,0 575.368,83.257 503.866,83.257 
+                    503.866,0 431.526,0 431.526,83.257 360.024,83.257 360.024,0 287.684,0 287.684,83.257 216.183,83.257 216.183,0 143.842,0 
+                    143.842,83.257 72.341,83.257 72.341,0 0,0 0,83.743 71.921,83.743 71.921,167 144.262,167 144.262,83.743 215.763,83.743 
+                    215.763,167 288.104,167 288.104,83.743 359.605,83.743 359.605,167 431.945,167 431.945,83.743 503.447,83.743 503.447,167 
+                    575.787,167 575.787,83.743 647.318,83.743 647.318,167 719.659,167 719.659,83.743 792,83.743 792,0" title="Checkered 1"> 
+                    <meta name="select:Shape overlay shape" content="755.719,26.133 719.477,-0.5 719.477,82.58 683.195,109.212 648.104,83.426 648.104,-0.5 
+                    611.822,26.133 575.582,-0.5 575.582,82.58 539.299,109.212 504.21,83.426 504.21,-0.5 467.927,26.133 431.687,-0.5 431.687,82.58 
+                    395.403,109.212 360.314,83.426 360.314,-0.5 324.031,26.133 287.791,-0.5 287.791,82.58 251.508,109.212 216.419,83.426 
+                    216.419,-0.5 180.136,26.133 143.895,-0.5 143.895,82.58 107.613,109.212 72.523,83.426 72.523,-0.5 36.241,26.133 0,-0.5 0,83.92 
+                    71.372,83.92 71.372,167 143.895,167 143.895,83.92 215.268,83.92 215.268,167 287.791,167 287.791,83.92 359.163,83.92 
+                    359.163,167 431.687,167 431.687,83.92 503.059,83.92 503.059,167 575.582,167 575.582,83.92 646.954,83.92 646.954,167 
+                    719.477,167 719.477,83.92 792,83.92 792,-0.5" title="Checkered 2">
+                    <meta name="select:Shape overlay shape" content="755.719,26.895 719.477,0.5 719.477,82.836 683.195,109.229 648.104,83.674 648.104,0.5 
+                    611.822,26.895 575.582,0.5 575.582,82.836 539.299,109.229 504.21,83.674 504.21,0.5 467.927,26.895 431.687,0.5 431.687,82.836 
+                    395.403,109.229 360.314,83.674 360.314,0.5 324.031,26.895 287.791,0.5 287.791,82.836 251.508,109.229 216.419,83.674 
+                    216.419,0.5 180.136,26.895 143.895,0.5 143.895,82.836 107.613,109.229 72.523,83.674 72.523,0.5 36.241,26.895 0,0.5 0,84.164 
+                    36.241,57.604 71.372,83.321 71.372,166.5 107.614,139.939 143.895,166.5 143.895,84.164 180.137,57.604 215.268,83.321 
+                    215.268,166.5 251.509,139.939 287.791,166.5 287.791,84.164 324.032,57.604 359.163,83.321 359.163,166.5 395.404,139.939 
+                    431.687,166.5 431.687,84.164 467.927,57.604 503.059,83.321 503.059,166.5 539.299,139.939 575.582,166.5 575.582,84.164 
+                    611.822,57.604 646.954,83.321 646.954,166.5 683.195,139.939 719.477,166.5 719.477,84.164 755.719,57.604 792,84.164 792,0.5" title="Checkered 3">
+                    <meta name="select:Shape overlay shape" content="742.5,79.223 791.096,157 693.903,157 742.5,79.223 692.999,0 643.499,79.223 692.095,157 
+                    594.905,157 643.499,79.223 594.001,0 544.499,79.223 593.097,157 495.904,157 544.499,79.223 495,0 445.501,79.223 494.096,157 
+                    396.904,157 445.501,79.223 396,0 346.5,79.223 395.096,157 297.904,157 346.5,79.223 297,0 247.5,79.223 296.096,157 198.905,157 
+                    247.5,79.223 198.001,0 148.5,79.223 197.097,157 99.904,157 148.5,79.223 99,0 49.5,79.223 98.096,157 0.904,157 49.5,79.223 0,0 
+                    0,157 0,158.447 0,167 792,167 792,158.447 792,157 792,0" title="Diamonds 1"> 
+                    <meta name="select:Shape overlay shape" content="792,1.676 748.001,83.088 790.393,161.525 748.246,105.588 705.353,162 748.001,83.088 
+                    704.001,1.676 660.001,83.088 702.719,162 660.224,105.588 617.353,162 660.001,83.088 616.001,1.676 572.002,83.088 614.688,162 
+                    572.204,105.588 529.354,162 572.002,83.088 528.003,1.676 484.003,83.088 526.656,162 484.184,105.588 441.355,162 484.003,83.088 
+                    440.004,1.676 396.003,83.088 438.619,161.938 396.162,105.588 353.355,162 396.003,83.088 352.004,1.676 308.005,83.088 
+                    350.653,162 350.634,162 308.131,105.588 265.346,162 307.994,83.088 263.995,1.676 219.996,83.088 262.644,162 262.613,162 
+                    220.11,105.588 177.348,162 219.996,83.088 175.997,1.676 131.997,83.088 174.646,162 174.593,162 132.09,105.588 89.586,162 
+                    89.35,162 131.997,83.088 87.999,1.676 43.999,83.088 86.647,162 86.573,162 44.07,105.588 1.351,162 43.999,83.088 0,1.676 0,167 
+                    792,167" title="Diamonds 2">
+                    <meta name="select:Shape overlay shape" content="792,1.676 748.001,83.088 790.393,161.525 748.246,125.588 705.353,162 748.001,83.088 
+                    704.001,11.676 660.001,83.088 702.719,162 660.224,125.588 617.353,162 660.001,83.088 616.001,21.676 572.002,83.088 614.688,162 
+                    572.204,125.588 529.354,162 572.002,83.088 528.003,31.676 484.003,83.088 526.656,162 484.184,125.588 441.355,162 
+                    484.003,83.088 440.004,41.676 396.003,83.088 438.619,161.938 396.162,125.588 353.355,162 396.003,83.088 352.004,41.676 
+                    308.005,83.088 350.653,162 350.634,162 308.131,125.588 265.346,162 307.994,83.088 263.995,31.676 219.996,83.088 262.644,162 
+                    262.613,162 220.11,125.588 177.348,162 219.996,83.088 175.997,21.676 131.997,83.088 174.646,162 174.593,162 132.09,125.588 
+                    89.586,162 89.35,162 131.997,83.088 87.999,11.676 43.999,83.088 86.647,162 86.573,162 44.07,125.588 1.351,162 43.999,83.088 
+                    0,1.676 0,167 792,167" title="Diamonds 3">
+                    <meta name="select:Shape overlay shape" content="792,2.396 756.001,56.846 720.001,2.396 684.001,56.846 648.002,2.396 
+                    612,56.846 576.001,2.396 540,56.846 504.001,2.396 468.001,56.846 432.001,2.396 396,56.846 360,2.396 324,56.846 288.001,2.396 
+                    252,56.845 216,2.396 180,56.846 144,2.396 108,56.846 72,2.396 36,56.846 0,2.396 0,165.604 36,111.154 72,165.604 108,111.154 
+                    144,165.604 180,111.154 216,165.604 252,111.154 288.001,165.604 324,111.154 360,165.604 396,111.154 432.001,165.604 
+                    468.001,111.154 504.001,165.604 540,111.154 576.001,165.604 612,111.154 648.002,165.604 684.001,111.154 720.001,165.604 
+                    756.001,111.154 792,165.604" title="Diamonds 4">
+                    <meta name="select:Shape overlay shape" content="704.504,158.773 704.504,0 617.008,158.772 617.008,0 529.511,158.774 529.511,0 442.015,158.773 
+                    442.015,0 354.519,158.773 354.519,0 267.022,158.773 267.022,0 179.526,158.773 179.526,0 92.03,158.773 92.03,0 0,167 
+                    87.496,167 92.03,167 174.993,167 179.526,167 262.489,167 267.022,167 349.985,167 354.519,167 437.481,167 442.015,167 
+                    524.978,167 529.511,167 612.474,167 617.008,167 699.971,167 704.504,167 792,167 792,0" title="Slashes right"> 
+                    <meta name="select:Shape overlay shape" content="87.496,158.773 87.496,0 174.992,158.772 174.992,0 262.489,158.774 262.489,0 349.985,158.773 
+                    349.985,0 437.481,158.773 437.481,0 524.978,158.773 524.978,0 612.474,158.773 612.474,0 699.97,158.773 699.97,0 792,167 
+                    704.504,167 699.97,167 617.007,167 612.474,167 529.511,167 524.978,167 442.015,167 437.481,167 354.519,167 349.985,167 
+                    267.022,167 262.489,167 179.526,167 174.992,167 92.029,167 87.496,167 0,167 0,0" title="Slashes left"> 
+                    <meta name="select:Shape overlay shape" content="792,1 720.72,44.514 720.72,157 711.92,157 711.92,44.514 640.64,1 640.64,118.486 703.729,157 
+                    568.75,157 631.84,118.486 631.84,1 560.56,44.514 560.56,157 551.76,157 551.76,44.514 480.48,1 480.48,118.486 543.569,157 
+                    408.591,157 471.68,118.486 471.68,1 400.4,44.514 400.4,157 391.6,157 391.6,44.514 320.32,1 320.32,118.486 383.41,157 
+                    248.431,157 311.52,118.486 311.52,1 240.24,44.514 240.24,157 231.44,157 231.44,44.514 160.16,1 160.16,118.486 223.25,157 
+                    88.271,157 151.36,118.486 151.36,1 80.08,44.514 80.08,157 71.28,157 71.28,44.514 0,1 0,118.486 63.089,157 0,157 0,167 792,167 
+                    792,157 728.91,157 792,118.486" title="Chevron 1"> 
+                    <meta name="select:Shape overlay shape" content="792,1 720.72,44.514 720.72,157 711.92,157 711.92,44.514 640.64,1 640.64,157 631.84,157 
+                    631.84,1 560.56,44.514 560.56,157 551.76,157 551.76,44.514 480.48,1 480.48,157 471.68,157 471.68,1 400.4,44.514 400.4,157 
+                    391.6,157 391.6,44.514 320.32,1 320.32,157 311.52,157 311.52,1 240.24,44.514 240.24,157 231.44,157 231.44,44.514 160.16,1 
+                    160.16,157 151.36,157 151.36,1 80.08,44.514 80.08,157 71.28,157 71.28,44.514 0,1 0,118.486 0,157 0,167 792,167 792,157 
+                    792,118.486" title="Chevron 2"> 
+                    <meta name="select:Shape overlay shape" content="791.994,86.808 745.229,2.9 698.681,86.329 698.665,146.152 652.077,146.152 652.092,86.55 
+                    605.584,2.9 559.035,86.329 559.021,146.152 512.431,146.152 512.446,86.55 465.938,2.9 419.39,86.329 419.375,146.152 
+                    372.787,146.152 372.802,86.55 326.294,2.9 279.746,86.329 279.731,146.152 233.143,146.152 233.157,86.55 186.649,2.9 
+                    140.101,86.329 140.086,146.152 93.498,146.152 93.513,86.55 47.005,2.9 0,86.329 0,167 792,167" title="Polygon"> 
+                    <meta name="select:Shape overlay shape" content="758.531,84.239 730.35,150.358 706.701,0 683.077,150.505 654.833,84.239 626.652,150.357 
+                    603.004,0 579.361,150.396 551.163,84.239 522.982,150.357 499.334,0 475.709,150.505 447.466,84.239 419.285,150.358 395.636,0 
+                    371.996,150.405 343.793,84.239 315.612,150.357 291.964,0 268.339,150.504 240.096,84.239 211.915,150.358 188.266,0 
+                    164.625,150.397 136.426,84.239 108.245,150.359 84.596,0 60.972,150.504 32.729,84.239 0.012,161 0.006,161 0.006,167 792,167 
+                    792,161" title="Rip"> 
+
+
+
+
+                    <meta name="select:Shape overlay shape" content="0" title="None"> 
+                    <!-- TIME FORMAT -->
+                    <meta name="select:Date format" content="1" title="Day, month year">
+                    <meta name="select:Date format" content="2" title="Day, short month, year">
+                    <meta name="select:Date format" content="3" title="D/M/Y">       
+                    <meta name="select:Date format" content="4" title="Contextual time">
+
+            <!-- [SECTION_0.4] -->
+            <!-- OPTIONS -->
+                <!-- NAV OPTIONS -->
+                    <meta name="if:Navigation on header" content="1"/><!-- CHOOSE TO SHOW TOP BAR OR OVERLAY NAVIGATION-->
+                    <meta name="if:Show page links" content="1"/><!-- CHOOSE TO SHOW PAGES -->     
+                    <meta name="if:Show archive link" content="1"/><!-- CHOOSE TO SHOW ARCHIVE LINK -->
+                    <meta name="if:Show ask link" content="1"/><!-- CHOOSE TO SHOW ASK LINK -->
+                    <meta name="if:Show submit link" content="0"/><!-- CHOOSE TO SHOW SUBMIT LINK -->
+                    <meta name="if:Show search bar" content="1"/><!-- CHOOSE TO SHOW SUBMIT LINK -->  
+                    <meta name="if:Display logo" content="1"/><!-- CHOOSE TO SHOW LOGO -->
+                    <meta name="if:Display  top tagline" content="0"/><!-- CHOOSE TO SHOW TOP TAGLINE -->  
+                    <meta name="if:Display bottom tagline" content="0"/><!-- CHOOSE TO SHOW BOTTOM TAGLINE -->
+                    <meta name="if:Taglines on top of logo" content="0"/><!-- CHOOSE TO SHOW BOTTOM TAGLINE -->
+                <!-- HEADER OPTIONS  -->
+                    <!-- PARALLAX EFFECT  -->
+                    <meta name="if:Parallax effect" content="1"/><!-- CHOOSE TO KEEP PARALLAX EFFECT -->       
+                    <!-- GRADIENT OVERLAY  --> 
+                    <meta name="if:Show header gradient" content="1"/><!-- CHOOSE TO KEEP GRADIENT EFFECT --> 
+                <!-- BODY OPTIONS  -->    
+                    <meta name="if:Keep photoset layout" content="0"/><!-- CHOOSE TO KEEP PHOTSET LAYOUTS -->
+                    <meta name="if:Infinite scrolling" content="0"/><!-- CHOOSE TO KEEP INFINITE SCROLLING -->  
+                <!-- SHARING OPTIONS  --> 
+                    <meta name="if:Share on Twitter" content="0"/>
+                    <meta name="if:Share by email" content="0"/>
+                    <meta name="if:Share on Facebook" content="0"/>
+                    <meta name="if:Share on Reddit" content="0"/>
+                    <meta name="if:Show next post links" content="1"/>
+
+
+            <!-- [SECTION_0.5] -->
+            <!-- TEXT -->
+                 <!-- NAV OPTIONS -->           
+                    <meta name="text:Navigation font size" content="11px"><!-- NAVIGATION LINK FONT SIZE --> 
+                    <meta name="text:Mobile menu break point" content="750px"><!-- MOBILE BREAK POINT -->                     
+                <!-- HEADER OPTIONS -->           
+                    <meta name="text:Header height" content="600px"><!-- HEADER HEIGHT --> 
+                <!-- HEADER OPTIONS  -->  
+                    <meta name="text:Header gradient opacity" content=".5"><!-- HEADER GRADIENT OPACITY -->
+
+                    <meta name="text:Max logo size" content="212px"><!-- HEADER GRADIENT OPACITY -->
+                    <meta name="text:Top tagline" content="GET OUT THERE">    
+                    <meta name="text:Top tagline font size" content="60px">  
+                    <meta name="text:Top tagline background opacity" content=".0"><!-- TAGLINE OPACITY -->   
+                    <meta name="text:Top tagline border opacity" content="1.0"><!-- TAGLINE OPACITY -->
+                    <meta name="text:Top tagline border width" content="4px"><!-- TAGLINE BORDER -->                                    
+                    <meta name="text:Top tagline padding vertical" content="20px"><!-- TAGLINE OPACITY -->   
+                    <meta name="text:Top tagline padding horizontal" content="40px"><!-- TAGLINE OPACITY -->  
+                    <meta name="text:Introduction margin bottom" content="20px"><!-- TAGLINE OPACITY -->  
+
+                    <meta name="text:Bottom tagline" content="Excuses will always be there for you, opportunity won't."> 
+                    <meta name="text:Bottom tagline font size" content="20px">                   
+                    <meta name="text:Bottom tagline background opacity" content=".3"><!-- TAGLINE OPACITY -->                        
+                    <meta name="text:Bottom tagline border opacity" content=".0"><!-- TAGLINE OPACITY -->      
+                    <meta name="text:Bottom tagline border width" content="0px"><!-- TAGLINE BORDER -->                                                 
+                    <meta name="text:Bottom tagline padding vertical" content="5px"><!-- TAGLINE OPACITY -->   
+                    <meta name="text:Bottom tagline padding horizontal" content="10px"><!-- TAGLINE OPACITY --> 
+
+                    <meta name="text:Introduction spacing" content="0px">   
+                    <meta name="text:Shape overlay size" content="150px"> 
+
+                    <meta name="text:Body font size" content="16px"><!-- BODY SIZE -->                 
+            <!-- [SECTION_0.6] -->
+            <!-- FONTS -->
+                    <meta name="text:Body font" content="Merriweather"> 
+                    <meta name="text:Title font" content="Merriweather"> 
+                    <meta name="text:Accent font" content="Montserrat"> 
+                    <meta name="text:Navigation font" content="Montserrat">
+                    <meta name="text:Top tagline font" content="Montserrat">
+                    <meta name="text:Bottom tagline font" content="Montserrat">
+      
+
+    <!-- [SECTION_1.0] -->
+    <!-- .......................................................................................................................................... -->
+    <!-- ............................................................... CUSTOM CSS ............................................................... -->
+    <!-- .......................................................................................................................................... -->
+
+    <style type="text/css">
+            @import url('https://fonts.googleapis.com/css?family={text:Body font}');
+            @import url('https://fonts.googleapis.com/css?family={text:Title font}');
+            @import url('https://fonts.googleapis.com/css?family={text:Navigation font}');
+            @import url('https://fonts.googleapis.com/css?family={text:Top tagline font}');  
+            @import url('https://fonts.googleapis.com/css?family={text:Bottom tagline font}');         
+            @import url('https://fonts.googleapis.com/css?family=Montserrat'); 
+            @import url('https://fonts.googleapis.com/css?family=Merriweather');    
+
+
+            /* [SECTION_1.1] */
+            /* ............................................... BODY STYLES ............................................... */ 
+
+            /* Links */  
+            a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;                       
+            }
+
+            a:active {
+                text-decoration: none;
+            }
+            
+            /* Body background */
+            body {
+                background-color: {color:Background colour};
+                display: block;
+                margin: 0 !important;
+                padding: 0 !important;
+                font-size: {text:Body font size};
+                font-family: {text:Body font}; 
+                color: {color:Body font colour};               
+            }     
+
+            .subPage{
+                display: none !important;
+            }     
+
+
+
+            /* [SECTION_1.2] */
+            /* .............................................. NAVIGATION BAR .............................................. */   
+
+            /* MAKE NAV BAR'S WIDTH 100% AND BRING LAYERING UP*/
+            .navbar{
+                width: 100%;               
+                margin: 0;
+                padding: 0;
+                z-index:98;                               
+            } 
+
+            /* MAKE DESKTOP MENU VISIBLE AND MOBILE MENU NOT VISIBLE*/
+            .navWrapperDesktop{
+                display: inline-block;
+                margin-bottom: 10px;
+                z-index: 99;
+            }
+
+            .navWrapperMobile{
+                display: none;
+
+            }
+
+            /* CENTER NAVIGATION, ADD PADDING TO TOP AND CHANGE BACKGROUND COLOUR */
+            .navigationOverlay{
+                margin-right: auto;
+                margin-left: auto;
+                padding-top: 35px;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                z-index: 99; 
+                width: 100%;              
+            }
+
+            .navigation{
+                margin-right: auto;
+                margin-left: auto;
+                padding-top: 35px;
+                text-align: center;
+                background-color: {color:Navigation Background}; 
+                z-index: 99;                
+            }
+
+            /* ADD SHADOW EFFECT ON THE NAVIGATION BAR */
+            .navshadow{
+                position:relative;
+                -webkit-box-shadow:0 1px 4px rgba({RGBcolor:Navigation shadow colour}, 0.3);
+                box-shadow:0 1px 4px rgba({RGBcolor:Navigation shadow colour}, 0.3);
+            }
+
+            .navshadow:after{
+                content:"";
+                position:absolute;
+                z-index:-1;
+                -webkit-box-shadow:0 0 40px rgba({RGBcolor:Navigation shadow colour},0.8);
+                box-shadow:0 0 40px rgba({RGBcolor:Navigation shadow colour},0.8);
+                bottom:0px;
+                left:10%;
+                right:10%;
+                width:80%;
+                height:50%;
+                -moz-border-radius:100%;
+                border-radius:100%;
+            }
+
+            /* CHANGE LINK FONT */
+            .navigation a{
+                font-family: {text:Navigation font};
+                color: {color:Navigation font colour}; 
+                font-weight: 400;   
+                font-size: {text:Navigation font size} !important;
+                text-transform: {select:Navigtion capitalization} !important;             
+            }  
+
+            .navigationOverlay a{
+                font-family: {text:Navigation font};
+                color: {color:Navigation font colour}; 
+                font-weight: 400;   
+                font-size: {text:Navigation font size} !important;
+                text-transform: {select:Navigtion capitalization} !important;             
+            }  
+
+            /* HOVER EFFECT */
+            .navigationLink{
+               position: relative;
+                transition: top .5s ease 0s, border-bottom-color .5s ease 0s;  ;              
+                top: 0;
+                border-bottom: 2px solid rgba({RGBcolor:Navigation font colour}, 0);
+                padding-bottom:7px;
+                margin-right: 25px; 
+                margin-top: 15px; 
+                margin-left:25px; 
+                display: inline-block;               
+            }
+
+            .navigationLink:hover{
+                position: relative;
+                top: -4px; 
+                padding-bottom:3px;
+                border-bottom: 2px solid rgba({RGBcolor:Navigation hover font colour}, 1); 
+                color: {color:Navigation hover font colour}; 
+            }
+
+
+            /* SEARCH BAR */
+            .sfm input { 
+                border: 1px solid {color:Navigation font colour}; 
+                margin: 0px; 
+                background-color: rgba(0,0,0,0); 
+                font-family: {text:Navigation font};
+                color: {color:Navigation font colour}; 
+                font-weight: 400;   
+                font-size: {text:Navigation font size} !important;
+                text-transform: uppercase;
+                text-transform: {select:Navigtion capitalization} !important;
+            }
+
+            .sfm{
+                display: inline-block;
+                margin-left: 0;
+                margin-right: 0;
+                margin-bottom: 0; 
+                margin-top: 15px;
+                padding-bottom: 10px;
+            }
+
+            .searchField{
+                max-width: 150px;
+                margin-left:25px !important;
+            }
+
+            .searchTitle{
+                border: 0px !important; 
+                transition: all .5s ease 0s; 
+            }
+
+            .searchTitle:hover{
+               color: {color:Navigation hover font colour}; 
+            }
+
+            /* MOBILE MENU BUTTON STYLING */
+             .navButtonWrapper{
+                margin-bottom: 15px;
+                margin-top: 25px;
+            }
+           
+            .btn { 
+                position: relative;         
+                margin-top:2%; 
+                border: 2px solid {color:Navigation font colour};
+                border-radius: 2px; 
+                height: 25px; 
+                width:26px;  
+            }
+
+            #lines:before { 
+                border-bottom: 11px double {color:Navigation font colour};
+                border-top: 4px solid {color:Navigation font colour};    
+                content:"";
+                height: 3px; 
+                position: absolute; 
+                right:3px;  
+                top: 3px; 
+                width:20px; 
+            }
+
+            #lines{
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+
+            /* MOBILE MENU */
+            .hidden {display: none;}
+            .unhidden {display: block;}
+
+            .navigationLinkMobile{
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .menuSpacing{
+                padding-top: 2px;
+                margin-bottom: 15px;
+            }
+
+
+            /* [SECTION_1.3] */
+            /* ................................................... HEADER .................................................. */  
+
+             /* MAKE THE HEADER 100%, HCANGE BACKGROUND COLOUR AND BRING DOWN LAYERING */      
+             #topbar {
+                width:100%;
+                height: {text:Header height};
+                background-color: {color:Header background colour};                                          
+                margin-left: auto;
+                margin-right: auto;
+                padding: 0;  
+                position: relative;   
+                top:0;  
+                z-index: 0;
+                overflow: hidden;
+             } 
+
+             /* FADE HEADER TO COLOUR ON SCROLL */
+             #blackOverlay{
+                background-color:{color:Header fade colour};
+                opacity:0.0;
+                position:absolute;
+                top:0;
+                width:100%;
+                height:100%;
+                z-index: 3; 
+            }            
+
+            /* GRADIENT EFFECT */
+           #colourOVerlay{  
+                height: 100%;
+                width: 100%;
+                background: {color:Gradient colour 1}; /* Old browsers */
+                background: -moz-linear-gradient(-45deg, {color:Gradient colour 1} 0%, {color:Gradient colour 2} 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(-45deg, {color:Gradient colour 1} 0%,{color:Gradient colour 2} 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(135deg, {color:Gradient colour 1} 0%,{color:Gradient colour 2} 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='{color:Gradient colour 1}', endColorstr='{color:Gradient colour 2}',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+                z-index: 2;  
+                opacity: .6;  
+                opacity: {text:Header gradient opacity} !important;           
+            }
+
+            /* PARALLAX EFFECT */
+            .paraEffect{
+                background: url('{image:Header background}') no-repeat;   
+                background-attachment: scroll;          
+                background-position: 50% 50%;
+                background-size: cover; 
+                background-size:{select:Header behaviour} !important;              
+                color: #fff;
+                overflow: hidden;
+                width: 100%;
+                height: {text:Header height};
+                position: absolute;
+                top: 0;
+            }
+
+
+            /* NO PARALLAX EFFECT */
+            .noparaEffect{
+                background: url('{image:Header background}') no-repeat;   
+                background-attachment: scroll;          
+                background-position: 50% 50%;
+                background-size: cover; 
+                background-size:{select:Header behaviour} !important;              
+                color: #fff;
+                overflow: hidden;
+                width: 100%;
+                height: {text:Header height};
+                position: absolute;
+                top: 0;
+            }     
+
+
+            /* [SECTION_1.4] */
+            /* .............................................. INTRODUCTION .............................................. */ 
+
+            #introduction{
+                position:absolute;
+                top:0;
+                width:100%;
+                height:100%;
+                z-index: 50;
+                display:table;
+            }
+
+            #introductionWrapper{
+                position: relative;
+                top: {text:Introduction spacing};
+                text-align: center;
+                display:table-cell;
+                vertical-align:middle;                          
+            }
+
+            #introductionEffect{
+                position: relative;
+                top: 0;
+                display: inline-block;
+            }
+
+            /* LOGO IMAGE */
+            #logoImage{
+                margin-bottom: {text:Introduction margin bottom};
+                max-width: {text:Max logo size};
+                margin-right: auto;
+                margin-left: auto;
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+
+            #logoImage img{
+                width: 100%;
+                height: auto;
+            }
+
+            /* MAIN TITLE */
+            .tagLine1{
+                font-size: {text:Top tagline font size} !important;  
+                color: {color:Top tagline font colour} !important;  
+                background-color: rgba({RGBcolor:Top tagline background colour}, {text:Top tagline background opacity});                                                           
+                font-family: {text:Top tagline font};  
+                padding-top: {text:Top tagline padding vertical};
+                padding-bottom:{text:Top tagline padding vertical};
+                padding-left: {text:Top tagline padding horizontal};
+                padding-right: {text:Top tagline padding horizontal};
+                border-width: {text:Top tagline border width};
+                border-color: rgba({RGBcolor:Top tagline border colour}, {text:Top tagline border opacity});
+                border-style: {select:Top tagline border style}; 
+                display: inline-block;  
+                margin-bottom: {text:Introduction margin bottom};  
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+            .taglineSpacer{
+                width: 100%;
+                height: 1px;
+                display: block;
+            }
+
+            /* SUB TITLE */
+            .tagLine2{
+                font-size: {text:Bottom tagline font size} !important;  
+                color: {color:Bottom tagline font colour} !important;  
+                background-color: rgba({RGBcolor:Bottom tagline background colour}, {text:Bottom tagline background opacity});                                                           
+                font-family: {text:Bottom tagline font};  
+                padding-top: {text:Bottom tagline padding vertical};
+                padding-bottom:{text:Bottom tagline padding vertical};
+                padding-left: {text:Bottom tagline padding horizontal};
+                padding-right: {text:Bottom tagline padding horizontal};
+                border-width: {text:Bottom tagline border width};
+                border-color: rgba({RGBcolor:Bottom tagline border colour}, {text:Bottom tagline border opacity});
+                border-style: {select:Bottom tagline border style}; 
+                display: inline-block;  
+                margin-bottom: {text:Introduction margin bottom};   
+                margin-left: 20px;
+                margin-right: 20px;  
+            }
+
+
+            /* [SECTION_1.5] */
+            /* .............................................. SHAPE OVERLAY .............................................. */
+
+            /* SHAPE OVERLAY HOLDER */
+            .shapeHolder{
+                width: 100%;
+                height: {text:Shape overlay size};
+                margin-bottom: -{text:Shape overlay size};
+                position: relative;
+                top: -{text:Shape overlay size};
+                overflow: hidden;
+            } 
+
+             /* CHANGE THE SHAPE OF THE OVERLAY */
+             .theShape{
+                width: 100%;
+                height: 100%;
+                display: block !important;          
+             }                                      
+
+             .drawTheShape{
+                width: 100% !important;
+                height: {text:Shape overlay size} !important;
+             }
+
+            .arrowDiv {
+                width: 100%;
+                height: {text:Shape overlay size}; 
+                background-color: {color:Background colour};
+                -webkit-clip-path: polygon({select:Shape overlay shape});
+                clip-path: polygon({select:Shape overlay shape});
+            }
+
+
+            /* [SECTION_1.6] */
+            /* .............................................. TEXT COLOURS .............................................. */
+
+            .mainColour{
+                color: {color:Title font colour} !important;
+            }
+
+            .secondColour{
+                color: {color:Sub text font colour} !important;
+            }
+
+            .secondColour a{
+                color: {color:Sub text font colour} !important;
+            }
+
+            .thirdColour{
+                color: {color:Body font colour} !Important;
+            }
+
+
+            /* [SECTION_1.7] */
+            /* .............................................. ALL POSTS .............................................. */ 
+
+            /* HOW WIDE A COLUMN IS */
+            .entry {
+                float: left;
+                width: 520px;  
+                text-align: center;                           
+            }       
+
+            /* SPACING BETWEEN POSTS */
+            .entryWrappper{ 
+                margin: 10px;                            
+            }   
+
+            /* SHADOW EFFECT */
+            .entryContainer{
+                -webkit-box-shadow:0 0 1px rgba(0,0,0,0.8);
+                box-shadow:0 0 1px rgba(0,0,0,0.8);
+                background-color: {color:Post background colour};              
+            }
+
+            /* CONTENT PADDING */
+            .entryContent{
+                padding-top: 25px;
+                padding-right: 25px;
+                padding-left: 25px;                                
+                text-align: left;
+            }
+
+            /* BRING BACK FROMATTING FOR POSTS */
+            .entryContent a{
+                text-decoration: underline;
+                color: {color:Body font colour};                   
+            }
+
+            .entryContent ul{
+                list-style-type: disc;
+                padding-left: 35px;
+                padding-top: 8px;
+                padding-bottom: 8px;               
+            }
+
+            .entryContent ol{
+                list-style-type: decimal;
+                padding-left: 35px;
+                 padding-top: 8px;
+                padding-bottom: 8px;                 
+            }
+
+            .entryContent ul li{
+                list-style-type: disc;
+            }
+
+            .entryContent ol li{
+                list-style-type: decimal;
+            }
+
+
+             /* BACKGROUND COLOUR FOR THE DATE AND TITLE OF POSTS + CONTENT PADDING */
+            .postColour{
+                background-color: {color:Post accent colour};
+                padding: 25px;                               
+                text-align: left;                
+            }
+
+            .smallerPostColour{
+                padding-top: 10px !important; 
+                padding-bottom: 10px !important; 
+            }
+
+             /* BACKGROUND COLOUR FOR POST THAT DON'T HAVE STUFF IN THE TITLE BLOCK */
+            .postColourDate{
+                padding-left: 25px !important;   
+                padding-top: 10px;
+                padding-bottom: 10px;   
+                padding-right: 25px;                        
+                display: inline-block;
+                background-color: {color:Post accent colour};                
+            }
+
+            .postColourDateWrapper{
+                display: block;
+                text-align: left;
+            }
+
+            .overlayDate{
+                display: block;
+            }
+
+             /* POST DATE*/ 
+             .postDate{
+                display: block;
+                margin-bottom: 8px;
+                font-size: .9em;
+                font-family: {text:Accent font}; 
+             }
+
+             .postDateOnly{
+                display: inline-block;
+                font-size: .9em;  
+                font-family: {text:Accent font};           
+             }
+
+             .dmy1{
+                display: none;
+             }
+
+             .dmy2{
+                display: none;              
+             }
+
+              .dmy3{
+                display: none;
+             }
+             
+              .dmy4{
+                display: none;               
+             } 
+
+             .dmy{select:Date format}{
+                display: block !important;
+             }  
+
+            /* REAMOVE EXTRA SPACING FROM FIRST PARAGRAPH TAG */ 
+            .entryContent p:first-of-type{
+                margin-top: 0px;
+               -webkit-margin-before: 0px;
+            }
+
+            .entryContent p:last-of-type{
+                margin-bottom: 0px;
+               -webkit-margin-after: 0px;
+            }
+
+             /* NOTES*/ 
+            .notesNumber{
+                float: right;
+                margin-right: 25px;
+                margin-top: 25px;
+            }
+
+             .notesNumber a{
+                 color: {color:Body font colour};  
+                 font-family: {text:Accent font};               
+            }           
+
+            /* TAGS*/   
+            .tagsWrapper{
+                margin-top: 25px;
+                text-align: left;
+                padding: 25px;
+            }    
+
+            .tagsWrapper a{
+                font-size: .7em;  
+                margin-right: 5px;
+                color: {color:Sub text font colour};              
+            }
+
+            .notesWrapper{
+                text-align: left;
+                padding: 25px;
+                margin-top: 25px;
+            }
+
+            .notesWrapper img{
+                display: none;
+            }
+
+            .notes blockquote{
+                border-color: {color:Sub text font colour};
+            }
+
+            .notesTitle{
+                font-weight: 400;
+                font-size: 1em;
+                padding-bottom: 15px;
+            }
+
+            h1 a:hover{
+                text-decoration: underline;
+            }
+
+            h1 {
+                font-weight: 400;
+                font-family: {text:Title font};  
+                font-size: 2.3em;   
+                margin:0;   
+                padding:0;     
+            }
+
+            h2 {
+                font-weight: 400;
+                font-family: {text:Title font};  
+                font-size: 1.5em;   
+                margin:0;   
+                padding:0; 
+                margin-bottom: 8px;    
+            }
+
+            .postFooter{
+                display: block;
+                padding-bottom: 25px;
+            }
+
+            blockquote{
+                border-left: 2px solid {color:Body font colour}; ;
+                padding-left: 10px;
+                -webkit-margin-before: 10px !important;
+                -webkit-margin-after: 10px !important;
+                -webkit-margin-start: 10px !important;
+                -webkit-margin-end: 10px !important;
+            }
+
+            .over500{
+                display: block;
+                color: {color:Body font colour}; 
+            }
+
+            .over500 a{
+                text-decoration: underline;
+                color: {color:Body font colour}; 
+            }
+
+            .smallThingsContainer{
+                display: block;
+                width: 100%;
+            }
+
+            .under500{
+                display: none;
+                color: {color:Body font colour}; 
+            }
+
+            .under500 a{
+                text-decoration: underline;
+                color: {color:Body font colour}; 
+            }
+
+            .under400{
+                display: none;
+                color: {color:Body font colour}; 
+            }
+
+            .under400{
+                 display: none;
+                color: {color:Body font colour};                
+            }
+
+            ol,ul, li { margin: 0; padding: 0; list-style-type: none }
+
+             #container {
+                max-width: 2600px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding-top:40px;
+            }
+
+              #container2 {
+                max-width: 2600px;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+                padding-top:40px;
+            }           
+
+            .permaPage{
+                max-width: 520px !important;              
+            }
+
+            .pagination {
+                display: none;
+            }
+
+            .showPage{
+                display: block !important;
+            }
+
+            .bottomButtons{
+                margin-top: 50px;
+                font-size: 1em;
+                display: block;
+                text-align: center;
+                width: 100%;
+            }
+
+            .buttonWrapper{
+                display: inline-block;
+                margin-right: auto;
+                margin-left: auto;
+                text-align: center;
+            }
+
+            .aButton{
+                padding-left: 25px;
+                padding-right: 25px; 
+                padding-bottom: 8px;
+                padding-top: 8px;                
+                background-color: {color:Post background colour};
+                color: {color:Body font colour}; 
+                margin-left: 25px;
+                margin-right: 25px;
+                display: inline-block;
+                margin-top: 25px;
+            }
+
+            .aButton:hover{
+                text-decoration: underline;
+            }
+
+            #infscr-loading{
+                 display: none !important; 
+            }
+
+            div.clearTheSpace{
+                clear: both;
+            }
+
+            h1{
+                margin: 0;
+                padding: 0;
+            }
+
+            .submission{
+                margin-bottom: 8px;
+                font-weight: bold;
+                font-size: 1.2em;
+            }
+
+            .readMore{
+                margin-top: 10px;
+            }
+
+            .credit{
+                width: 100%;
+                text-align: center;
+                font-size: {text:Body font size} !important;
+                font-family: {text:Body font} !important; 
+                color: {color:Body font colour} !important;
+            }
+
+            .credit a{
+                 font-size: {text:Body font size} !important;
+                font-family: {text:Body font} !important; 
+                color: {color:Body font colour} !important;               
+            }
+
+            .credit a:hover{
+                text-decoration: underline;
+            }
+
+
+
+
+            /* [SECTION_1.8] */
+            /* .............................................. SOCIAL BUTTONS .............................................. */
+
+             /* SOCIAL BUTTONS */ 
+            .buttons{
+                text-align: right;
+                float: left;
+                display: inline-block;
+                margin-left: 25px;
+                margin-top: 25px;
+            }
+
+            .likeButton{
+                display: inline-block !important;
+            }
+
+            .likeButton { /* Make a parent element */
+                 position: relative;
+            }
+            .likeButton svg path { /* Select your color of choice */
+                 fill: {color:Share icons colour}; 
+            }
+            .likeButton .like_button { /* Position like button above your custom one */
+                 position: absolute;
+                 top: 0;
+                 opacity: 0;
+             }
+             .likeButton .like_button.liked { /* Keep the functionality active */
+                 opacity: 1;
+             }          
+
+            .reblogButton{
+                display: inline-block !important;
+            }
+
+            .reblogButton svg path { fill: {color:Share icons colour};}
+
+            .twitterBird{
+                width: auto;
+                height: 20px;
+            }
+
+            .facebookIcon{
+                width: auto;
+                height: 20px;
+            }
+
+
+            /* [SECTION_1.9] */
+            /* .............................................. ANSWER POSTS .............................................. */
+ 
+             .asker{
+                margin-top: 8px;
+                font-size: .9em;
+                font-family: {text:Accent font}; 
+             }
+
+             .asker a{
+                text-decoration: underline;
+             }
+
+             .answerer{
+                font-size: .9em;
+             }
+
+             .answerer{
+                text-decoration: underline;
+                margin-bottom: 8px;
+             }
+
+             .answerer-answer{
+                margin-bottom: 25px;
+             }
+
+             .rebloggedAsk{
+                border-left: 2px solid {color:Body font colour}; ;
+                padding-left: 10px;
+                -webkit-margin-before: 10px !important;
+                -webkit-margin-after: 10px !important;
+                -webkit-margin-start: 10px !important;
+                -webkit-margin-end: 10px !important;
+             }
+
+             .replies{
+                font-size: 1em;              
+             }
+
+             .tumblr_blog{
+                font-size: .9em;                
+             }
+
+
+            /* [SECTION_1.10] */
+            /* .............................................. AUDTIO POSTS .............................................. */
+                     
+            .audioPlayerSpacing{
+                margin-top: 25px !important; 
+            }
+
+             .tumblr_audio_player{
+                width: 100% !important;              
+            }
+
+            .soundcloud_audio_player{
+                width: 100%;
+                height: auto;
+            }
+
+            .spotify_audio_player{
+                 width: 100%;
+                height: 80px;
+                overflow: hidden;               
+            }
+
+
+
+            /* [SECTION_1.11] */
+            /* .............................................. CHAT POSTS .............................................. */
+            .chat{
+                padding-left: 0px !important;
+            }
+
+            .chat li{
+                list-style-type: none !important;
+            }
+
+            .label{
+                font-weight: bold;
+            }
+
+            .odd{
+                padding-top: 5px;
+            }
+
+            .even{
+                padding-top: 5px;
+            }
+
+
+            /* [SECTION_1.12] */
+            /* .............................................. LINK POSTS .............................................. */
+
+            .linkTitle{
+                text-align: center;
+                font-size: 1.5em;
+                margin: 0px !important;
+                border-radius: 5px;
+                display: block;
+                width: 100%;
+                background-color: {color:Post background colour};
+            }
+
+            .linkTitle:hover{
+                text-decoration: underline !important;
+            }
+
+            .linkTitleMargin{
+                padding: 8px;
+            }
+
+            .excerpt{
+                font-weight: bold;
+            }
+
+
+            /* [SECTION_1.13] */
+            /* .............................................. QUOTE POSTS .............................................. */
+            .aQuote{
+                font-weight: 400;
+                font-size: 1.5em;
+            }
+
+            .sourceQuote{
+                display: inline-block;
+                font-size: .9em;
+             }
+
+
+            .sourceQuote p:first-of-type{
+                display: inline-block;
+            }
+
+
+            /* [SECTION_1.14] */
+            /* .............................................. PHOTO POSTS .............................................. */
+
+            /* PAN PHOTO */              
+            .panPhoto{
+                width: 100%;
+                display: block;
+            }
+
+
+            /* PHOTO POST */
+            .singleImage{
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+            }
+
+            .photosetImage{
+                display: block;
+            }
+
+            .photoset{
+                display: block;
+                background-color: green;
+            }
+
+            .photosetImageWrapper{
+                position: relative;
+                background-color: {color:Post accent colour};
+            }
+
+            .highResWrapper{
+                position: relative;
+            }
+
+            .highResWrapper img{
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .highRes{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0;
+                left: 0;
+            }
+
+            /* [SECTION_1.15] */
+            /* .............................................. VIDEO POSTS .............................................. */
+
+            .instagram-media{
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .tumblr_video_container{
+                margin-left: auto !important;
+                margin-right: auto !important;                
+            }
+
+            /* [SECTION_1.16] */
+            /* .............................................. MEDIA QUERIES .............................................. */
+
+             /* RESIZE CONTAINER, ONCE REAHING ONE COLUMN MAKE EVEYTHING 100% WIDTH */  
+            @media only screen and (max-width: 2700px){
+                   #container { max-width: 2080px; }
+                   #container2 { max-width: 2080px; }
+            }
+
+            @media only screen and (max-width: 2180px){
+                   #container { max-width: 1560px; }
+                   #container2 { max-width: 1560px; }
+            }
+
+
+            @media only screen and (max-width: 1660px){
+                   #container { max-width: 1040px; }
+                   #container2 { max-width: 1040px; }
+            }
+
+            @media only screen and (max-width: 1140px){
+                   #container { max-width: 520px; }
+                   #container2 { max-width: 520px; }
+            }
+
+             @media only screen and (max-width: 550px){
+                   #container { max-width: 100%; }
+                   #container2 { max-width: 100%; }
+                   .entry { 
+                        max-width: 100%;
+                        margin-right: auto;
+                        margin-left: auto;
+                    }
+
+                    .singleImage{
+                        max-width: 100% !important;
+                    }
+
+                    .photosetImageWrapper img { width: 100% }
+
+                    .photosetImage img { max-width: 100% }
+
+                    .over500{
+                            display: none !important;
+                        }
+
+                        .under500{
+                            display: block;
+                            margin-top: 25px;
+                            margin-right: auto;
+                            margin-left: auto;
+                        }
+
+                        .under500Photo{
+                            margin-top: 0px!important;
+                        }
+
+                        p img{
+                            width: 100%;
+                            height: auto;
+                        }
+
+            } 
+
+             /* ADD PADDING/MARGINS TO MAKE SMALL SCREEN LAYOUT LOOK BETTER  */  
+            @media only screen and (max-width: 450px){
+                .under500{
+                    display: none;
+                }
+
+                .under400{
+                    display: inline-block;
+                    margin-top: 25px;
+                            margin-right: auto;
+                            margin-left: auto;
+                }
+
+                .under400Photo{
+                            margin-top: 0px!important;
+                }
+            }
+
+
+             /* NAVIGATION */ 
+             @media only screen and (max-width: {text:Mobile menu break point}){
+                   .navWrapperDesktop { display: none; }
+
+                    .navWrapperMobile{
+                        display: inline-block;
+                    }
+
+                    .navigation{
+                        padding-top: 25px;
+                    }
+
+                    .navigationOverlay{
+                        position: static;  
+                        background-color: {color:Navigation Background};             
+                    }
+            }            
+
+    </style>
+
+<style type="text/css">{CustomCSS}</style>
+
+<!-- [SECTION_2.0] -->
+<!-- .......................................................................................................................................... -->
+<!-- ............................................................... JAVASCRIPT ............................................................... -->
+<!-- .......................................................................................................................................... -->
+
+<script src="http://static.tumblr.com/wwsspkq/4HEo1bx3z/jquery.js"></script>
+<script src="http://static.tumblr.com/wwsspkq/Jmso1bx3p/imageloaded.js"></script>
+<script src="http://static.tumblr.com/wwsspkq/1PDo21sah/masonry.js"></script>
+<script src="http://static.tumblr.com/wwsspkq/OsEo21v37/infscroll.js"></script>
+
+
+<script>
+
+/*-- [SECTION_2.1] */
+/* .............................................. MASONRY AND INFINITE SCROLL .............................................. */
+$(function(){
+
+    var $container = $('#container');
+
+    $container.imagesLoaded(function(){
+        $container.masonry({
+            itemSelector: '.entry',
+            "gutter": 0,
+        });
+    });
+
+    $container.infinitescroll({
+        itemSelector : ".entry",
+        contentSelector : "#container",
+        navSelector : ".pagination",
+        nextSelector : ".nextButton",
+        loadingImg : "",
+    },
+
+        // Trigger Masonry as a callback
+        function( newElements ) {
+            // hide new items while they are loading
+            var $newElems = $( newElements ).css({ opacity: 0 });
+            // ensure that images load before adding to masonry layout
+            $newElems.imagesLoaded(function(){
+                // show elems now they're ready
+                $newElems.animate({ opacity: 1 });
+                $container.masonry( 'appended', $newElems, true );
+            });
+    }
+    );
+}); 
+
+
+// JUST MASONRY
+$(function(){
+    var $container = $('#container2');
+
+    $container.imagesLoaded(function(){
+        $container.masonry({
+            itemSelector: '.entry',
+            "gutter": 0,
+        });
+    });
+}); 
+
+
+/*-- [SECTION_2.2] */
+/* .............................................. FADE HEADER .............................................. */
+
+$(function () {
+    $(window).scroll(function () {
+        var currentScrollTop = $(window).scrollTop();
+        $('#blackOverlay').css('opacity',currentScrollTop/$('#blackOverlay').height());
+    });
+});
+
+
+/*-- [SECTION_2.3] */
+/* .............................................. MOVE LOGO .............................................. */
+$(function () {
+    $(window).scroll(function () {
+        var currentScrollTop = $(window).scrollTop();
+        var triggerAnimate = $('#blackOverlay').height();
+                      //console.log(currentScrollTop);
+                        //console.log(triggerAnimate);                          
+
+
+        if (currentScrollTop >= (triggerAnimate/4)){
+            $('#introductionEffect').stop().animate({
+                top: 30,
+                opacity: 0,
+            }, 600);        
+        }
+
+
+        if (currentScrollTop < (triggerAnimate/4)){
+            $('#introductionEffect').stop().animate({
+                top: 0,
+                opacity: 1,
+            }, 600);        
+        }
+
+    });
+});
+
+
+/*-- [SECTION_2.4] */
+/* .............................................. PARALAX EFFECT .............................................. */
+function Parallax() {
+    // Get Scroll Position of the Window
+    scrollPos = $(this).scrollTop();
+
+    // Get height of image
+    var tmpImg = new Image();
+    var changeBackground;   
+    var orgHeigh;
+    var howMuch;
+    tmpImg.src="{image:Header background}";
+    orgHeight = tmpImg.height;
+
+
+    // Find ratio
+    howMuch = ((scrollPos/orgHeight)*100);
+
+    if((50 - howMuch)>0){
+        changeBackground = (50 - howMuch);
+    }
+
+    else{
+        changeBackground = 0;
+    }
+
+    // Making a Beautiful Parallax Effect changing background position
+    $('.paraEffect').css({
+        'background-position' : '50% ' + (changeBackground + "%")
+    });
+}
+$(document).on("ready",function(){
+
+    // Doing the magic
+    $(window).scroll(function() {
+        Parallax();
+    });
+});
+
+
+/*-- [SECTION_2.5] */
+/* .............................................. MOBILE MENU .............................................. */
+ function unhide(divID) {
+     var item = document.getElementById(divID);
+     if (item) {
+     item.className=(item.className=='hidden')?'unhidden':'hidden';
+     }
+ }
+
+ /*-- [SECTION_2.6] */
+/* .............................................. LIGHTBOX .............................................. */
+ $(function(){ // shorthand document.ready()
+    $('.make_lightbox').each(function(){ // this is just an element I let them click, it carries a series of data- attributes.
+        $(this).on('click',function(){  // when clicked. this is the newer jQuery click() handler that's only in v1.8+ so that may be something to note.
+            var lbArray = []; // create blank array.
+            var arrayContents = {"width":$(this).data('width'), "height":$(this).data('height'), "low_res":$(this).data("lowres"), "high_res":$(this).data('highres')}; // make set of the data- attributes. 
+            lbArray.push(arrayContents); // push the set into the array.
+            Tumblr.Lightbox.init(lbArray,1); // trigger Tumblr lightbox. the '1' is the number of photos it expects. specific to how tumblr has things set up.
+            $('body').toggleClass('tumblr_lightbox_active'); // use this to prevent the user from scrolling.
+        });
+    });
+});
+
+
+
+</script>
+</head>
+
+
+<body>
+
+    <!-- [SECTION_3.0] -->
+    <!-- .......................................................................................................................................... -->
+    <!-- ............................................................. NAVIGATION BAR ............................................................. -->
+    <!-- .......................................................................................................................................... -->
+ 
+        {block:IfNotNavigationonheader} 
+        <div class="navbar navshadow">
+            <div class="navigation">
+        {/block:IfNotNavigationonheader} 
+
+        {block:IfNavigationonheader} 
+       <div class="navbar">
+            <div class="navigationOverlay">
+        {/block:IfNavigationonheader} 
+
+            
+                <!-- DESKTOP NAVIGATION -->
+                <div class="navWrapperDesktop">
+
+                    <!-- HOME LINK -->
+                    <a class="navigationLink" href="/">Home</a>
+
+                    <!-- OTHER PAGES -->
+                    {block:IfShowpagelinks}
+                        {block:HasPages}
+                             {block:Pages}
+                                <a class="navigationLink" href="{URL}">{Label}</a> 
+                             {/block:Pages}
+                        {/block:HasPages}
+                    {/block:IfShowpagelinks}
+
+                    <!-- ARCHIVE LINK -->
+                    {block:IfShowarchivelink}
+                    <a class="navigationLink" href="/archive"><span class="iconic folder_stroke"></span>Archive</a>
+                    {/block:IfShowarchivelink}
+
+                    <!-- ASK LINK -->
+                    {block:AskEnabled}
+                        {block:IfShowasklink}
+                            <a class="navigationLink" href="/ask">Ask</a>
+                        {/block:IfShowasklink}            
+                    {/block:AskEnabled}
+
+                    <!-- SUBMIT LINK -->                
+                    {block:IfShowsubmitlink}
+                        <a class="navigationLink" href="/submit">Submit</a>
+                    {/block:IfShowsubmitlink}  
+
+                        <!-- SEARCH BAR -->
+                         {block:IfShowsearchbar}
+                            <form action="/search" method="get" class="sfm">
+                                <input class="searchField" type="text" name="q" value="{SearchQuery}" id="sf"/>
+                                <input class="searchTitle" type="submit" value="Search" id="sb"/>
+                            </form>
+                        {/block:IfShowsearchbar}  
+                </div><!-- END DESKTOP NAVIGATION --> 
+
+                <!-- MOBILE NAVIGATION -->
+                <div class="navWrapperMobile"> 
+                    <!-- COLLAPSED MENU LINK -->
+                    <div class="navButtonWrapper">
+                        <a href="javascript:unhide('displaybx');"><div id="lines" class="btn"></div></a>
+                    </div><!-- END NAVBUTTONWRAPPER -->
+
+                    <!-- EXPANDED MENU -->
+                    <div id="displaybx" class="hidden">
+                            <div class="menuSpacing">
+
+                                <!-- HOME LINK -->
+                                <a class="navigationLinkMobile" href="/">Home</a>
+
+                                <!-- OTHER PAGES -->
+                                {block:IfShowpagelinks}
+                                    {block:HasPages}
+                                         {block:Pages}
+                                            <a class="navigationLinkMobile" href="{URL}">{Label}</a> 
+                                         {/block:Pages}
+                                    {/block:HasPages}
+                                {/block:IfShowpagelinks}
+
+                                <!-- ARCHIVE LINK -->
+                                {block:IfShowarchivelink}
+                                <a class="navigationLinkMobile" href="/archive"><span class="iconic folder_stroke"></span>Archive</a>
+                                {/block:IfShowarchivelink}
+
+                                <!-- ASK LINK -->
+                                {block:AskEnabled}
+                                    {block:IfShowasklink}
+                                        <a class="navigationLinkMobile" href="/ask">Ask</a>
+                                    {/block:IfShowasklink}            
+                                {/block:AskEnabled}
+
+                                <!-- SUBMIT LINK -->                
+                                {block:IfShowsubmitlink}
+                                    <a class="navigationLinkMobile" href="/submit">Submit</a>
+                                {/block:IfShowsubmitlink}    
+
+                                    <!-- SEARCH BAR -->
+                                     {block:IfShowsearchbar}
+                                        <form action="/search" method="get" class="sfm">
+                                            <input class="searchField" type="text" name="q" value="{SearchQuery}" id="sf"/>
+                                            <input class="searchTitle" type="submit" value="Search" id="sb"/>
+                                        </form>
+                                    {/block:IfShowsearchbar}  
+
+                            </div><!-- END MENU SPACING -->
+                    </div><!-- END DISPLAYBX -->
+                </div><!-- END NAVWRAPPERMOBILE -->
+            </div><!-- END NAVIGATION + NAVIGATION SHADOW-->
+       </div><!-- END NAVBAR -->
+
+
+
+
+    <!-- [SECTION_4.0] -->
+    <!-- .......................................................................................................................................... -->
+    <!-- ................................................................. HEADER ................................................................. -->
+    <!-- .......................................................................................................................................... -->
+
+       <!-- HEADER -->
+        <div id="topbar">
+
+            <!-- DISPLAY THE PARALLAX HEADER -->
+            {block:IfParallaxeffect}
+            <div class="paraEffect"></div>
+            {/block:IfParallaxeffect}
+
+             <!-- DISPLAY THE REGULAR HEADER -->           
+            {block:IfNotParallaxeffect}
+            <div class="noparaEffect"></div>
+            {/block:IfNotParallaxeffect} 
+
+            <!-- COLOUR OVERLAY, FADE IN ON SCROLL -->                    
+            <div id="blackOverlay"></div>
+
+             <!-- GRADIENT COLOUR -->            
+            {block:IfShowheadergradient}<div id="colourOVerlay"></div>{/block:IfShowheadergradient}
+
+            <!-- HEADER CONTENT WRAPPER -->           
+            <div id="introduction">
+                <div id="introductionWrapper">
+                    <div id="introductionEffect">
+
+
+            {block:IfTaglinesontopoflogo}
+                         <!-- TOP TAGLINE --> 
+                        {block:IfDisplaytoptagline}                     
+                        <div class="tagLine1">{text:Top tagline}</div>
+                        {/block:IfDisplaytoptagline}
+
+                        <div class="taglineSpacer"></div>
+
+                        <!-- BOTTOM TAGLINE --> 
+                        {block:IfDisplaybottomtagline}                     
+                        <div class="tagLine2">{text:Bottom tagline}</div>
+                        {/block:IfDisplaybottomtagline}             
+                        <!-- LOGO -->   
+
+                        <div class="taglineSpacer"></div>  
+
+                        {block:IfDisplaylogo}                     
+                        <div id="logoImage"><img src="{image:Logo image}"/></div>
+                        {/block:IfDisplaylogo}
+
+
+            {/block:IfTaglinesontopoflogo}
+
+             <!-- DISPLAY THE REGULAR HEADER -->           
+            {block:IfNotTaglinesontopoflogo}
+                        <!-- LOGO -->                       
+                        {block:IfDisplaylogo}                     
+                        <div id="logoImage"><img src="{image:Logo image}"/></div>
+                        {/block:IfDisplaylogo}
+
+                        <div class="taglineSpacer"></div>
+
+                        <!-- TOP TAGLINE --> 
+                        {block:IfDisplaytoptagline}                     
+                        <div class="tagLine1">{text:Top tagline}</div>
+                        {/block:IfDisplaytoptagline}
+
+                        <div class="taglineSpacer"></div>
+
+                        <!-- BOTTOM TAGLINE --> 
+                        {block:IfDisplaybottomtagline}                     
+                        <div class="tagLine2">{text:Bottom tagline}</div>
+                        {/block:IfDisplaybottomtagline}  
+            {/block:IfNotTaglinesontopoflogo} 
+
+
+ 
+
+                    </div><!-- END INTRODUCTIONEFFECT -->
+                </div><!-- END INTRODUCTIONWRAPPER -->
+            </div><!-- END INTRODUCTION -->
+
+
+        </div><!-- END HEADER -->
+
+
+        <!-- SHAPE OVERLAY --> 
+            <div class="shapeHolder">  
+
+                    <!-- ARROW DOWN -->
+                    <div class="theShape">                 
+                        <svg class="drawTheShape" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                        width="792px" height="167px" viewBox="0 0 792 167" enable-background="new 0 0 792 167" xml:space="preserve" preserveAspectRatio="none">
+                        <polygon fill="{color:Background colour}" points="{select:Shape overlay shape}"/>
+                         </svg>
+                    </div>
+
+            </div><!-- END SHAPE HOLDER -->
+
+
+
+    <!-- [SECTION_5.0] -->
+    <!-- .......................................................................................................................................... -->
+    <!-- .............................................................. MAIN CONTENT .............................................................. -->
+    <!-- .......................................................................................................................................... -->
+
+    <!-- MAIN PAGE DIV WRAPPER-->
+    {block:IfInfinitescrolling} 
+        {block:IndexPage}
+        <div id="container" class="scroll">
+        {/block:IndexPage}
+    {/block:IfInfinitescrolling} 
+
+    {block:IfNotInfinitescrolling} 
+        {block:IndexPage}
+        <div id="container2" class="scroll">
+        {/block:IndexPage}
+    {/block:IfNotInfinitescrolling} 
+
+    <!-- POST AND SUB PAGES WRAPPER -->
+        {block:PermalinkPage}
+        <div id="container" class="permaPage">
+        {/block:PermalinkPage}       
+
+
+    <!-- START POST LIST -->
+        {block:Posts inlineMediaWidth="500"} 
+
+                <div class="entry">
+                    <div class="entryWrappper">
+                        <div class="entryContainer">
+                            
+                <!-- [SECTION_5.1] -->
+                <!-- .......................................................... TEXT POST .......................................................... -->
+                    {block:Text}
+                        <div class="postColour">
+
+                            <!-- DATE -->
+                            {block:Date} 
+                                <div class="postDate secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                                <div class="postDate secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                                <div class="postDate secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                                <div class="postDate secondColour dmy4">{TimeAgo}</div>
+                            {/block:Date}         
+
+                            <!-- TITLE -->
+                            {block:Title}
+                                <h1><a href="{Permalink}" class="mainColour">{Title}</a></h1>
+                            {/block:Title}
+
+                        </div><!-- END POST COLOUR -->
+
+                        <div class="entryContent">
+
+                            {block:Submission} 
+                                <div class="submission">
+                                    Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                                </div>
+                            {/block:Submission}
+
+                            <!-- BODY -->
+                            {Body}
+
+                            <!-- READ MORE LINK -->
+                            {block:More}<div class="readMore"><a href="{Permalink}">Read More...</a></div>{/block:More}
+                        
+                        </div><!-- END ENTRYCONTENT -->                                       
+                    {/block:Text}
+
+                <!-- [SECTION_5.2] -->
+                <!-- .......................................................... PHOTO POST .......................................................... -->
+                    {block:Photo}
+                        <!-- THE PHOTO -->
+                        <div class="highResWrapper">
+                                        {block:HighRes}
+                                        <div class="make_lightbox" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}"><a href="javascript:;" class="highRes"></a></div>
+                                        {/block:HighRes}  
+                        <img class="singleImage" src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                        </div>
+
+                        <div class="postColourDateWrapper">
+                            <div class="postColourDate overlayDate">
+                                <!-- DATE -->
+                                {block:Date} 
+                                <div class="postDateOnly secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                                <div class="postDateOnly secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                                <div class="postDateOnly secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                                <div class="postDateOnly secondColour dmy4">{TimeAgo}</div>
+                                {/block:Date}                                              
+                            </div><!-- END POST COLOUR -->
+                        </div><!-- END POSTCOLOURDATEWRAPPER OVERLAYDATE -->
+
+                        {block:Submission} 
+                            <div class="entryContent">
+                                <div class="submission">
+                                    Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                                </div>
+                            </div>
+                        {/block:Submission}<!-- END ENTRYCONTENT --> 
+
+                        {block:Caption}
+                            <div class="entryContent">     
+                                <div class="caption">{Caption}</div>
+                            </div><!-- END ENTRYCONTENT --> 
+                        {/block:Caption}                                             
+                    {/block:Photo}
+
+                <!-- [SECTION_5.3] -->
+                <!-- .......................................................... PHOTOSET POST .......................................................... -->
+                    {block:Photoset}
+                        <div class="photosetImageWrapper">
+
+                            <div class="over500">
+                                    {block:IfNotKeepphotosetlayout}
+                                          {block:Photos}
+                                                    <div class="photosetImageWrapper">
+                                                        <div class="highResWrapper">
+                                                        <img src="{PhotoURL-500}" class="photosetImage" alt="{PhotoAlt}"/>
+                                                        {block:HighRes}
+                                                        <div class="make_lightbox" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}"><a href="javascript:;" class="highRes"></a></div>
+                                                        {/block:HighRes} 
+                                                        </div>
+                                                    </div>                      
+                                            {/block:Photos}
+                                    {/block:IfNotKeepphotosetlayout}
+
+
+                                    {block:IfKeepphotosetlayout}
+                                        {Photoset-500}
+                                    {/block:IfKeepphotosetlayout}
+                            </div><!-- END OVER500 --> 
+
+                                <div class="smallThingsContainer">
+                                    {block:Photos}
+                                    <div class="under500 under500Photo">
+                                        <div class="highResWrapper"><img src="{PhotoURL-500}" class="photosetImage" alt="{PhotoAlt}"/>
+                                            {block:HighRes}
+                                            <div class="make_lightbox" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}"><a href="javascript:;" class="highRes"></a></div>
+                                            {/block:HighRes} 
+                                        </div>
+                                    </div>
+
+                                    <div class="under400 under400Photo">
+                                        <div class="highResWrapper"><img src="{PhotoURL-500}" class="photosetImage" alt="{PhotoAlt}"/>
+                                            {block:HighRes}
+                                            <div class="make_lightbox" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}"><a href="javascript:;" class="highRes"></a></div>
+                                            {/block:HighRes} 
+                                        </div>
+                                    </div>
+                                    {/block:Photos}
+                                </div> <!-- END SMALLTHINGSCONTAINER --> 
+
+                        </div><!-- END PHOTOSETIMAGEWRAPPER--> 
+
+                        <div class="postColourDateWrapper">
+                            <div class="postColourDate overlayDate">
+                                <!-- DATE -->
+                                {block:Date} 
+                                <div class="postDateOnly secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                                <div class="postDateOnly secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                                <div class="postDateOnly secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                                <div class="postDateOnly secondColour dmy4">{TimeAgo}</div>
+                                {/block:Date}                                              
+                            </div><!-- END POST COLOUR -->
+                        </div><!-- END POSTCOLOURDATEWRAPPER OVERLAYDATE -->                                           
+
+                        {block:Submission} 
+                            <div class="entryContent">
+                                <div class="submission">
+                                    Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                                 </div>
+                            </div><!-- END ENTYCONTENT -->
+                        {/block:Submission}
+
+
+                        {block:Caption}
+                            <div class="entryContent">
+                                <div class="caption">{Caption}</div>
+
+<!--
+                                    {block:Photos}
+                                        
+                                        <div class="make_lightbox" data-width="{PhotoWidth-HighRes}" data-height="{PhotoHeight-HighRes}" data-lowres="{PhotoURL-500}" data-highres="{PhotoURL-HighRes}">View high resolution version</div>
+                                        
+                                    {/block:Photos}-->
+
+
+                            </div><!-- END ENTRYCONTENT -->    
+                        {/block:Caption}
+
+                    {/block:Photoset}
+
+
+                <!-- [SECTION_5.4] -->
+                <!-- .......................................................... PANORAMA POST .......................................................... -->
+                    {block:Panorama}
+
+                        {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" class="panPhoto" />{LinkCloseTag}
+  
+                        <div class="postColourDateWrapper">
+                            <div class="postColourDate overlayDate">
+                                <!-- DATE -->
+                                {block:Date} 
+                                <div class="postDateOnly secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                                <div class="postDateOnly secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                                <div class="postDateOnly secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                                <div class="postDateOnly secondColour dmy4">{TimeAgo}</div>
+                                {/block:Date}                                              
+                            </div><!-- END POST COLOUR -->
+                        </div><!-- END POSTCOLOURDATEWRAPPER OVERLAYDATE -->
+
+                        {block:Submission} 
+                            <div class="entryContent">
+                                <div class="submission">
+                                    Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                                </div>
+                            </div><!-- END ENTRYCONTENT -->
+                        {/block:Submission}
+
+                        {block:Caption}
+                            <div class="entryContent">
+                                {Caption}     
+                            </div><!-- END ENTRYCONTENT -->  
+                        {/block:Caption} 
+
+                    {/block:Panorama}
+
+
+                <!-- [SECTION_5.5] -->
+                <!-- .......................................................... QUOTE POST .......................................................... -->
+                     {block:Quote}
+
+                        <div class="postColour">
+                            <!-- DATE -->
+                            {block:Date} 
+                            <div class="postDate secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                            <div class="postDate secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                            <div class="postDate secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                            <div class="postDate secondColour dmy4">{TimeAgo}</div>
+                            {/block:Date}   
+
+                            <!-- QUOTE -->
+                                <h1 class="aQuote mainColour">&#34; <a href="{Permalink}" class="mainColour">{Quote}</a> &#34;</h1>                                             
+                        </div><!-- END POST COLOUR -->
+
+                        {block:Submission} 
+                            <div class="entryContent">
+                                <div class="submission">
+                                    Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                                </div>
+                            </div><!-- END ENTRYCONTENT -->
+                        {/block:Submission}
+
+                        {block:Source}
+                        <div class="entryContent">
+                            <!-- SOURCE -->
+                                <div class="sourceQuote">&#126; {Source}</div>
+                        </div><!-- END ENTRYCONTENT --> 
+                        {/block:Source} 
+
+                    {/block:Quote}
+
+
+                <!-- [SECTION_5.6] -->
+                <!-- .......................................................... LINK POST .......................................................... -->
+                    {block:Link}
+
+                        <div class="postColour">
+                            <!-- DATE -->
+                            {block:Date} 
+                            <div class="postDate secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                            <div class="postDate secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                            <div class="postDate secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                            <div class="postDate secondColour dmy4">{TimeAgo}</div>
+                            {/block:Date}   
+
+                            <!-- THE LINK -->
+                            <a href="{URL}" class="linkTitle thirdColour" {Target}><div class="linkTitleMargin">{Name}</div></a>                                           
+                        </div><!-- END POST COLOUR -->
+
+                        {block:Submission} 
+                            <div class="entryContent">
+                                <div class="submission">
+                                    Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                                </div>
+                            </div>
+                        {/block:Submission}
+
+                         <div class="entryContent">
+                            <!-- EXCERPT -->
+                                {block:Excerpt} 
+                                    <div class="excerpt">{Excerpt}</div>
+                                {/block:Excerpt}
+
+                            <!-- DESCRIPTION -->
+                                {block:Description}
+                                    <div class="description">{Description}</div>
+                                {/block:Description}
+                                           
+                         </div><!-- END ENTRYCONTENT --> 
+
+                    {/block:Link}  
+
+
+                <!-- .......................................................... CHAT POST .......................................................... -->
+                    {block:Chat}
+                        <div class="postColour">
+                            <!-- DATE -->
+                            {block:Date} 
+                            <div class="postDate secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                            <div class="postDate secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                            <div class="postDate secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                            <div class="postDate secondColour dmy4">{TimeAgo}</div>
+                            {/block:Date}  
+
+                            <!-- THE TITLE -->
+                            {block:Title}
+                                <h1  class="aQuote"><a href="{Permalink}" class="mainColour">{Title}</a></h1>
+                            {/block:Title}                                              
+                        </div><!-- END POST COLOUR --> 
+
+                        <div class="entryContent">
+
+                            <!-- CHAT LINES -->
+                            <ul class="chat">
+                                {block:Lines}
+                                    <li class="{Alt} user_{UserNumber}">
+                                        {block:Label}
+                                            <span class="label">{Label}</span>
+                                        {/block:Label}{Line}
+                                    </li>
+                                {/block:Lines}
+                            </ul>
+                                           
+                         </div><!-- END ENTRYCONTENT -->
+                 {/block:Chat} 
+
+
+                <!-- [SECTION_5.7] -->
+                <!-- .......................................................... AUDIO POST .......................................................... -->
+                {block:Audio}
+                    <div class="postColour smallerPostColour">
+                        <!-- DATE -->
+                        {block:Date} 
+                        <div class="postDateOnly secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                        <div class="postDateOnly secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                        <div class="postDateOnly secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                        <div class="postDateOnly secondColour dmy4">{TimeAgo}</div>
+                        {/block:Date}                                              
+                    </div><!-- END POST COLOUR -->  
+
+                    <div class="entryContent">     
+                        <!-- AUDIO PLAYER -->                            
+                        {AudioEmbed-250}
+
+                        <!-- CAPTION -->
+                        {block:Caption}
+                            <div class="caption audioPlayerSpacing">{Caption}</div>
+                        {/block:Caption}
+
+                        {block:AlbumArt}
+                            <img src="" class="cover">
+                        {/block:AlbumArt}
+
+                    </div><!-- END ENTRYCONTENT -->
+                {/block:Audio} 
+
+
+                <!-- [SECTION_5.8] -->
+                <!-- .......................................................... VIDEO POST .......................................................... -->
+                {block:Video}
+
+                    <div class="postColour smallerPostColour">
+                        <!-- DATE -->
+                        {block:Date} 
+                        <div class="postDateOnly secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                        <div class="postDateOnly secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                        <div class="postDateOnly secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                        <div class="postDateOnly secondColour dmy4">{TimeAgo}</div>
+                        {/block:Date}                                              
+                    </div><!-- END POST COLOUR -->               
+
+                    <!-- THE VIDEO -->
+                    <div class="over500">{Video-500}</div>
+
+                    <div class="smallThingsContainer">
+                            <div class="under500">{Video-400}</div>
+                            <div class="under400">{Video-250}</div>
+                    </div>
+
+                    {block:Submission} 
+                        <div class="entryContent">
+                            <div class="submission">
+                                Submission by <a href="{SubmitterURL}">{Submitter}</a>:
+                            </div>
+                        </div><!-- END ENTRYCONTENT -->
+                    {/block:Submission}
+
+                    <div class="entryContent">
+                        <!-- CAPTION -->
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </div><!-- END ENTRYCONTENT -->
+
+                {/block:Video}              
+
+
+                <!-- [SECTION_5.9] -->
+                <!-- .......................................................... ANSWER POST .......................................................... -->
+                {block:Answer}
+
+                    <div class="postColour">
+                        <!-- DATE -->
+                        {block:Date} 
+                        <div class="postDate secondColour dmy1">{DayOfMonth}{DayOfMonthSuffix} {Month}, {Year}</div>
+                        <div class="postDate secondColour dmy2">{DayOfMonth}{DayOfMonthSuffix} {ShortMonth}, {Year}</div>
+                        <div class="postDate secondColour dmy3">{DayOfMonth}/{MonthNumber}/{Year}</div>
+                        <div class="postDate secondColour dmy4">{TimeAgo}</div>
+                        {/block:Date} 
+
+                        <!-- THE QUESTION -->
+                        <div class="question">
+                            <h1 class="aQuote"><div class="asker-question mainColour">{Question}</div></h1>
+                            <div class="asker secondColour">~ {Asker}</div>
+                        </div>                                                 
+                    </div><!-- END POST COLOUR -->
+
+                    <!-- THE ANSWER -->
+                    <div class="entryContent">
+                        {block:Answerer}
+                            <div class="answerer">{Answerer}:</div>
+                            <div class="answer"><div class="answerer-answer">{Answer}</div></div>
+                        {/block:Answerer}
+
+                        <!-- ALL THE REBLOGS -->
+                        <div class="replies">
+                            {Replies}
+                        </div>
+
+                    </div><!-- END ENTRYCONTENT --> 
+
+                {/block:Answer}                   
+
+
+    <!-- [SECTION_6.0] -->
+    <!-- .......................................................................................................................................... -->
+    <!-- .............................................................. POST FOOTER .............................................................. -->
+    <!-- .......................................................................................................................................... -->
+
+                <div class="postFooter">
+
+                <!-- [SECTION_6.1] -->
+                <!-- .................................................... LIKE REBLOG AND SOCIAL MEDIA BUTTONS .................................................... -->
+                    {block:Date}
+                    <div class="buttons">
+
+                        <!-- LIKE ICON -->
+                            <div class="likeButton">
+                                <svg width="20" height="20" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                                    <path d="M14.0425097,0.000920262799 C16.1435097,-0.0400797372 18.8835097,1.28192026 18.9635097,5.36992026 C19.0525097,9.95492026 15.1985097,13.3079203 9.48350967,16.2089203 C3.76650967,13.3079203 -0.0874903349,9.95492026 0.00150966509,5.36992026 C0.0815096651,1.28192026 2.82150967,-0.0400797372 4.92250967,0.000920262799 C7.02450967,0.0419202628 8.87050967,2.26592026 9.46950967,2.92792026 C10.0945097,2.26592026 11.9405097,0.0419202628 14.0425097,0.000920262799 Z"></path>
+                                </svg>
+                                {LikeButton size="20"}
+                            </div>
+
+                        <!-- REBLOG ICON -->
+                            <div class="reblogButton">
+                                {ReblogButton size="20"}
+                            </div>
+
+                        <!-- TWITTER ICON -->
+                        {block:IfShareonTwitter} 
+                            <a TARGET="_blank" href="https://twitter.com/intent/tweet?url={ShortURL}&amp;text=Take%20a%20look%20at%20this&#58;&amp;">
+                                <svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" height="20" width="20" version="1.1" xmlns:cc="http://creativecommons.org/ns#" viewBox="0 0 182.66667 150.66667" xmlns:dc="http://purl.org/dc/elements/1.1/"><metadata id="metadata8"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/></cc:Work></rdf:RDF></metadata><defs id="defs6"><clipPath id="clipPath20" clipPathUnits="userSpaceOnUse"><path id="path18" d="m0 10.012h1366.9v1110.9h-1366.9z"/></clipPath></defs><g id="g10" transform="matrix(1.3333 0 0 -1.3333 0 150.67)"><g id="g12" transform="scale(.1)"><g id="g14"><g id="g16" clip-path="url(#clipPath20)"><path id="path22" d="m1366.9 989.39c-50.27-22.309-104.33-37.387-161.05-44.18 57.89 34.723 102.34 89.679 123.28 155.15-54.18-32.15-114.18-55.47-178.09-68.04-51.13 54.49-124.02 88.55-204.68 88.55-154.89 0-280.43-125.55-280.43-280.43 0-21.988 2.457-43.398 7.258-63.91-233.08 11.68-439.72 123.36-578.04 293.01-24.141-41.4-37.969-89.567-37.969-140.97 0-97.308 49.489-183.13 124.76-233.44-45.969 1.437-89.218 14.058-127.03 35.078-0.043-1.18-0.043-2.348-0.043-3.52 0-135.9 96.68-249.22 224.96-275-23.512-6.41-48.281-9.8-73.86-9.8-18.089 0-35.628 1.711-52.781 5 35.711-111.41 139.26-192.5 262-194.77-96.058-75.23-216.96-120.04-348.36-120.04-22.621 0-44.961 1.332-66.918 3.91 124.16-79.568 271.55-125.98 429.94-125.98 515.82 0 797.86 427.31 797.86 797.93 0 12.153-0.28 24.223-0.79 36.25 54.77 39.571 102.31 88.95 139.93 145.2" fill="{color:Share icons colour}"/></g></g></g></g></svg>
+                            </a>
+                        {/block:IfShareonTwitter}
+
+                        <!-- EMAIL ICON -->
+                        {block:IfSharebyemail}
+                             <a href="mailto:?Subject={BlogURL}post/{PostID}&amp;body=Take%20a%20look%20at%20this&#33;">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             width="20px" height="20px" viewBox="18.5 133.5 482 351" enable-background="new 18.5 133.5 482 351"
+                                             xml:space="preserve">
+                                <g>
+                                    <path fill="{color:Share icons colour}" d="M492.108,205.347c-2.933-6.703-8.781-9.68-15.204-6.355
+                                        c-6.804,3.522-13.131,8.096-19.286,12.718c-24.665,18.522-49.186,37.234-73.751,55.889c-17.103,12.987-34.184,26.003-51.285,38.992
+                                        c-16.111,12.236-32.115,24.619-48.391,36.632c-14.585,10.766-36.869,10.308-51.292-0.647
+                                        c-27.345-20.772-54.657-41.589-82.004-62.359c-28.838-21.902-57.687-43.793-86.568-65.639c-6.269-4.742-12.649-9.339-19.086-13.849
+                                        c-1.6-1.121-3.568-1.819-5.463-2.401c-5.395-1.653-10.332,0.398-12.999,5.356c-1.051,1.955-1.86,4.039-2.779,6.064
+                                        c0,80.335,0,160.671,0,241.007c2.148,4.605,3.665,9.663,6.573,13.724c6.419,8.966,15.75,12.646,26.672,12.631
+                                        c24.899-0.036,49.798-0.014,74.697-0.014c109.23,0,218.462-0.018,327.691,0.034c8.974,0.004,17.345-1.809,23.742-8.312
+                                        c3.403-3.459,5.772-7.981,8.361-12.177c1.085-1.759,1.527-3.912,2.263-5.887c0-80.336,0-160.672,0-241.007
+                                        C493.37,208.281,492.749,206.81,492.108,205.347z"/>
+                                    <path fill="{color:Share icons colour}" d="M58.52,164.944c8.911,7.438,18.033,14.625,27.116,21.853
+                                        c21.504,17.115,43.022,34.212,64.558,51.287c23.983,19.015,48.135,37.82,71.924,57.074c10.488,8.488,21.32,14.82,35.438,14.738
+                                        c12.619-0.072,23.86-2.848,33.684-11.136c8.877-7.489,18.129-14.533,27.242-21.739c19.989-15.805,40.008-31.57,59.988-47.383
+                                        c22.922-18.142,45.865-36.256,68.687-54.525c5.526-4.424,11.022-9.027,15.766-14.245c4.317-4.749,2.559-9.642-3.718-11.333
+                                        c-3.801-1.023-7.891-1.335-11.85-1.341c-62.679-0.078-125.357-0.055-188.036-0.055c-62.554,0-125.107-0.003-187.661,0.01
+                                        c-2.5,0-5.016-0.013-7.496,0.251c-4.252,0.453-9.05,0.845-10.772,5.405C51.547,158.68,55.179,162.156,58.52,164.944z"/>
+                                </g>
+                             </a>
+                        {/block:IfSharebyemail}
+
+                        <!-- FACEBOOK ICON -->
+                        {block:IfShareonFacebook}
+                            <a TARGET="_blank"  href="https://www.facebook.com/sharer/sharer.php?u={BlogURL}post/{PostID}">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             width="20px" height="20px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895"
+                                             xml:space="preserve">
+                                <path fill="{color:Share icons colour}" d="M248.082,4.588H18.812c-7.856,0-14.224,6.367-14.224,14.224v229.271c0,7.854,6.366,14.225,14.224,14.225
+                                            h123.432v-98.803h-33.585v-38.896h33.585V95.925c0-33.287,20.33-51.413,50.024-51.413c14.225,0,26.45,1.059,30.012,1.533v34.788
+                                            l-20.596,0.009c-16.147,0-19.274,7.674-19.274,18.935v24.832h38.515l-5.016,38.896h-33.499v98.803h65.673
+                                            c7.854,0,14.223-6.369,14.223-14.225V18.812C262.305,10.955,255.937,4.588,248.082,4.588z"/>
+                                </svg>
+
+                             </a>
+                        {/block:IfShareonFacebook}
+
+                        <!-- REDDIT ICON -->
+                        {block:IfShareonReddit}
+                             <a TARGET="_blank" href="http://www.reddit.com/submit?url={BlogURL}post/{PostID}&amp;title=Take%20a%20look%20at%20this&#33;">
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                             width="20px" height="20px" viewBox="0 0 266.893 266.895" enable-background="new 0 0 266.893 266.895"
+                                             xml:space="preserve">
+                                    <g>
+                                        <path fill="{color:Share icons colour}" d="M163.079,133.992c-7.943,0-14.352,6.408-14.352,14.352c0,7.942,6.408,14.35,14.352,14.35
+                                            c7.898,0,14.351-6.407,14.351-14.35C177.43,140.401,171.022,133.992,163.079,133.992z"/>
+                                        <path fill="{color:Share icons colour}" d="M133.159,190.719c-18.458-0.09-29.062-10.922-29.153-11.011l-5.686,5.596
+                                            c0.542,0.542,13.358,13.313,34.839,13.403c21.481-0.09,34.253-12.861,34.793-13.403l-5.686-5.596
+                                            C162.132,179.797,151.346,190.629,133.159,190.719z"/>
+                                        <path fill="{color:Share icons colour}" d="M117.861,148.344c0-7.943-6.409-14.352-14.352-14.352s-14.351,6.408-14.351,14.352
+                                            c0,7.942,6.408,14.35,14.351,14.35S117.861,156.286,117.861,148.344z"/>
+                                        <path fill="{color:Share icons colour}" d="M248.082,4.588H18.812c-7.855,0-14.224,6.367-14.224,14.224v229.271c0,7.854,6.366,14.225,14.224,14.225
+                                            h229.271c7.854,0,14.223-6.369,14.223-14.225V18.812C262.305,10.955,255.937,4.588,248.082,4.588z M222.243,151.639
+                                            c0.314,2.21,0.496,4.422,0.496,6.678c0,34.254-40.119,62.053-89.581,62.053c-49.461,0-89.58-27.799-89.625-62.008
+                                            c0-2.256,0.181-4.467,0.542-6.68c-7.266-3.744-12.23-11.371-12.23-20.216c0-12.501,10.019-22.655,22.339-22.655
+                                            c5.867,0,11.191,2.256,15.163,6.002c14.982-10.515,35.381-17.374,58.081-18.367l1.128-0.045l13.9-46.482l40.479,8.123
+                                            c3.385-6.543,10.064-10.966,17.826-10.966h0.047c0.044,0,0.044,0,0.089,0c11.103,0,20.128,9.116,20.128,20.353
+                                            c0,11.237-8.98,20.353-20.082,20.353c-0.046,0-0.046,0-0.091,0c-0.044,0-0.044,0-0.091,0c-10.424,0-18.953-7.988-19.991-18.232
+                                            l-30.28-6.092l-9.884,33.034c22.022,1.264,41.743,8.033,56.365,18.322c4.017-3.746,9.297-6.002,15.163-6.002
+                                            c12.32,0,22.339,10.154,22.339,22.655C234.473,140.266,229.509,147.893,222.243,151.639z"/>
+                                    </g>
+                                </svg>
+                             </a>
+                        {/block:IfShareonReddit}
+                    </div><!-- END BUTTONS -->
+                     {/block:Date}
+
+
+                <!-- [SECTION_6.2] -->
+                <!-- .................................................... NOTES .................................................... -->
+
+                    <!-- NOTES ON INDEX PAGE-->
+                        {block:IndexPage}
+                            <div class="notesNumber">
+                                <a href="{Permalink}">{NoteCountWithLabel}</a>
+                            </div>
+                        {/block:IndexPage}
+
+                        <!-- CLEAR FLOATING -->
+                        <div class="clearTheSpace"></div>
+
+                </div><!-- END POSTFOOTER -->
+            </div><!-- END ENTRYCONTAINER -->
+
+                <!-- DISPLAY TAGS AND NOTES ON PERMALINK PAGES -->
+                            {block:PermalinkPage}
+                                <!-- TAGS -->
+                                {block:HasTags}
+                                <div class="tagsWrapper postColour">  
+                                    <div class="tagsList">
+                                            <h1 class="notesTitle secondColour">Tags:</h1>
+                                           {block:Tags}
+                                              <a href="{TagURL}">#{Tag} </a>
+                                           {/block:Tags}
+                                    </div>
+                                </div><!-- END HASTAGS -->
+                                {/block:HasTags}
+
+                                <!-- NOTES -->
+                                {block:PostNotes} 
+                                    <div class="notesWrapper postColour secondColour">
+                                        {block:NoteCount}<h1 class="notesTitle"><a  class="mainColour" href="{Permalink}">Notes ({NoteCount}):</a></h1>{/block:NoteCount}
+                                        {PostNotes}
+                                    </div>
+                                {/block:PostNotes}
+                            {/block:PermalinkPage}
+
+
+   
+                    </div><!-- END ENTRYWRAPPER -->
+                </div><!-- END ENTRY -->
+
+        {/block:Posts}
+
+        <div class="clearTheSpace"></div>
+</div><!-- END CONTAINER -->
+
+
+
+                <!-- [SECTION_6.3] -->
+                <!-- .................................................... PAGE NAVIGATION .................................................... -->
+<div class="clearTheSpace"></div>
+        <!-- PAGNINATION -->
+        {block:IndexPage}
+        {block:IfNotInfinitescrolling} 
+        <div class="showPage">
+            <div class="bottomButtons">
+                <div class="buttonWrapper pagination">
+                {block:Pagination}
+                {block:PreviousPage}<a class="aButton" href="{PreviousPage}">Previous</a>{/block:PreviousPage} {block:NextPage}<a class="aButton nextButton" href="{NextPage}" id="next">Next</a>{/block:NextPage}
+                {/block:Pagination}
+                </div>
+            </div>
+        </div>
+        {/block:IfNotInfinitescrolling} 
+        {/block:IndexPage}
+
+        <!-- PAGNINATION IF INFINITE SCROLLING IS TURNED OFF -->
+        {block:IndexPage}
+        {block:IfInfinitescrolling} 
+        <div class="pagination">
+            <div class="bottomButtons">
+                <div class="buttonWrapper pagination">
+                {block:Pagination}
+                {block:PreviousPage}<a class="aButton" href="{PreviousPage}">Previous</a>{/block:PreviousPage}
+                {block:NextPage}<a class="aButton nextButton" href="{NextPage}" id="next">Next</a>{/block:NextPage}
+                {/block:Pagination}
+                </div>
+            </div>
+        </div>
+        {/block:IfInfinitescrolling} 
+        {/block:IndexPage}
+
+
+        <!-- PPOST NAVIGATION -->
+        {block:PermalinkPagination}
+            {block:IfShownextpostlinks} 
+            <div class="bottomButtons">
+               <div class="buttonWrapper">
+                    {block:PreviousPost} 
+                    <a class="aButton" href="{PreviousPost}">Previous</a>
+                    {/block:PreviousPost}
+
+                    {block:NextPost} 
+                    <a class="aButton" href="{NextPost}" id="next">Next Post</a>
+                    {/block:NextPost}
+                </div>
+            </div>
+            {/block:IfShownextpostlinks} 
+        {/block:PermalinkPagination}
+
+
+
+
+<br><br>
+
+<div class="credit">2016 - MIYOTHEME | BY <a target="_blank" href="http://aitchpk.tumblr.com/">AITCHPK.TUMBLR.COM</a></div>
+
+<br><br><br>
+
+
+    </body>
+
+
+</html>
